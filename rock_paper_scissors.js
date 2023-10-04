@@ -65,20 +65,20 @@ function getWinner(player1, player2) {
     (player1 === "rock" && player2 === "scissors") ||
     (player1 === "scissors" && player2 === "paper")
   ) {
-    return 1;
+    return alert("You Win!");
   } else if (
     (player1 === "rock" && player2 === "paper") ||
     (player1 === "scissors" && player2 === "rock") ||
     (player1 === "paper" && player2 === "scissors")
   ) {
-    return -1;
+    return alert("Computer Wins!");
   } else {
-    return 0;
+    return alert("It's a Draw!");
   }
 }
 
-let result = getWinner(player1Choice, "rock");
-console.log(result)
+let result = getWinner(player1Choice, "paper");
+
 
 
 
