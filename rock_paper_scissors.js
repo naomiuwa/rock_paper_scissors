@@ -48,14 +48,14 @@ if (playerMove === "paper" && computerMove === "scissors") {
 //if its a draw return 0
 
 function getWinner (player1, player2) {
-    if (player1 === "paper" && player2 === "rock") {
+    if (player1 === "paper" && player2 === "rock" || player1 === "rock" && player2 === "scissors" || player1 === "scissors" && player2 === "paper") {
         return 1; 
-    } else if (player1 === "rock" && player2 === "paper") {
+    } else if (player1 === "rock" && player2 === "paper" || player1 === "scissors" && player2 === "rock" || player1 === "paper" && player2 === "scissors") {
         return -1; 
     } else {
         return 0; 
     }
 }
 
-let result = getWinner("paper", "paper"); 
+let result = getWinner("scissors", "scissors"); 
 console.log(result)
